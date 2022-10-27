@@ -12,7 +12,7 @@ db = SQLAlchemy(app)
 class User(db.Model):
     id = db.Column('id', db.Integer, primary_key=True)
     date = db.Column(db.DateTime, default=datetime.utcnow)
-    username = db.Column(db.String, unique=True, nullable=False)
+    username = db.Column(db.String, nullable=False)
     email = db.Column(db.String)
     def __init__(self, username, email):
         self.username = username
